@@ -36,7 +36,7 @@ pipeline {
           steps {
             sh '''sleep 5
 curl localhost:8081 
-if [[ $(echo $?) -eq 0 ]]; 
+if [ $(echo $?) -eq 0 ]; 
 then
   echo "success" 
   ps -ef | grep node | awk \'{print $2}\' | xargs kill
