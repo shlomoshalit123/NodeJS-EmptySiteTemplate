@@ -5,7 +5,6 @@ pipeline {
       parallel {
         stage('chekout code') {
           steps {
-            cleanWS()
             git(url: 'git@github.com:lidorg-dev/NodeJS-EmptySiteTemplate.git', branch: 'master', credentialsId: 'github')
           }
         }
