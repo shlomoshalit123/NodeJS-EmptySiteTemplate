@@ -28,7 +28,9 @@ pipeline {
       parallel {
         stage('Run the App') {
           steps {
+            catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
             sh 'node server.js'
+            }
           }
         }
 
