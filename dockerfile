@@ -10,7 +10,7 @@ WORKDIR /usr/src/app
 
 RUN npm install
 # If you are building your code for production
-# RUN npm install
+RUN npm install
 
 # Bundle app source
 COPY . .
